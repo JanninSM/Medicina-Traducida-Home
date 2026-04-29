@@ -685,3 +685,85 @@ h1, h2, h3 {
     padding-top: 24px;
     color: #D1D5DB;
 }
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+@media (max-width: 1024px) {
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .hero-content,
+    .intro-content,
+    .consult-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .articles-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    .menu {
+        display: none;
+    }
+
+    .hero-text h2 {
+        font-size: 32px;
+    }
+
+    .intro-text h2,
+    .consult-text h2,
+    .section-header h2,
+    .resources-header h2,
+    .final-cta-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-content,
+    .intro-content,
+    .consult-content {
+        gap: 40px;
+    }
+
+    .doctor-cards {
+        position: static;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .doctor-card {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .small-article {
+        grid-template-columns: 1fr;
+    }
+
+    .resources-header {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .final-cta-content p {
+        font-size: 16px;
+    }
+
+}
