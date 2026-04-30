@@ -125,6 +125,15 @@ h1, h2, h3 {
     color: var(--primary);
 }
 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: var(--secondary);
+    cursor: pointer;
+}
+
 /* =========================
    HERO
 ========================= */
@@ -728,6 +737,38 @@ h1, h2, h3 {
 
 nav {
     display: none;
+    }
+
+nav.active {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    left: 20px;
+    background-color: var(--white);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 18px 35px rgba(30, 58, 95, 0.15);
+    z-index: 10;
+    }
+
+.menu {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    }
+
+    .hero-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .hero-image img {
+    max-width: 310px;
+    margin: 0 auto;
     }
 
     .hero-text h2 {

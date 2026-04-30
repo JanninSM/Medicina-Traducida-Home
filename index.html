@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
   
   <!-- NAVBAR -->
@@ -20,6 +21,10 @@
         <h1 class="logo-text">Medicina Traducida</h1>
       </div>
       
+      <button class="menu-toggle" aria-label="Abrir menú">
+      ☰
+      </button>
+
       <nav>
         <ul class="menu">
           <li><a href="#">Inicio</a></li>
@@ -334,6 +339,15 @@
     </div>
   
   </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
