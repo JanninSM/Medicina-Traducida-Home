@@ -718,8 +718,16 @@ h1, h2, h3 {
 ========================= */
 @media (max-width: 768px) {
 
-    .menu {
-        display: none;
+  .navbar .container {
+    position: relative;
+    }
+
+.menu-toggle {
+    display: block;
+    }
+
+nav {
+    display: none;
     }
 
     .hero-text h2 {
