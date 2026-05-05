@@ -11,54 +11,40 @@
 
 <body>
   
-  <!-- NAVBAR -->
+  <!-- INICIO: NAV + HERO -->
 
-  <header class="navbar">
-    <div class="container">
-      
-      <div class="brand">
-        <div class="logo-circle"></div>
-        <h1 class="logo-text">Medicina Traducida</h1>
+  <header class="home-hero">
+    <img src="IMAGENES PAG PRINCIPAL/IMG Pag principal 3.jpg" alt="Consulta médica familiar" class="hero-bg-img">    
+    <div class="hero-overlay">
+      <div class="container home-hero-content">
+        
+        <div class="hero-logo"></div>
+
+        <div class="hero-main-text">
+          <span>Bienvenidos a</span>
+          <h1>Medicina Traducida</h1>
+          <p>
+            Entiende tu salud sin complicaciones.<br>
+            Información médica clara, confiable y explicada como realmente la necesitas.
+          </p>
+        </div>
+
+        <div class="hero-top">          
+          <button class="menu-toggle">☰</button>
+          <nav class="hero-nav">
+            <ul class="menu">
+              <li><a href="#">Quiénes somos</a></li>
+              <li><a href="#">Artículos</a></li>
+              <li><a href="#">Recursos digitales</a></li>
+              <li><a href="#">Agendar cita</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+
       </div>
-      
-      <button class="menu-toggle" aria-label="Abrir menú">
-      ☰
-      </button>
-
-      <nav>
-        <ul class="menu">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Quiénes somos</a></li>
-          <li><a href="#">Artículos</a></li>
-          <li><a href="#">Recursos digitales</a></li>
-          <li><a href="#">Agendar cita</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </nav>
-    
     </div>
-  
   </header>
-  
-  <!-- HERO -->
-
-  <section class="hero">
-    <div class="container hero-content">
-
-      <div class="hero-text">
-        <h2>Entiende tu salud sin complicaciones</h2>
-        <p>
-          Información médica clara, confiable y explicada como realmente la necesitas.
-        </p>
-        <a href="#" class="btn-primary">Explorar artículos</a>
-      </div>
-
-      <div class="hero-image">
-        <img src="IMAGENES PAG PRINCIPAL/IMG Pag principal 1.jpg" alt="Ilustración médica">
-      </div>
-      
-    </div>
-  </section>
 
   <!-- SECCIÓN: INTRODUCCIÓN / PROPUESTA DE VALOR -->
 
@@ -83,14 +69,11 @@
 
       <div class="intro-text">
         <span class="section-tag">Medicina explicada para pacientes</span>
-
         <h2 id="intro-title">La medicina no debería ser difícil de entender</h2>
-
         <p>
           Medicina Traducida nace para ayudarte a comprender tu salud sin miedo,
           sin tecnicismos innecesarios y sin terminar más confundido después de buscar en internet.
         </p>
-
         <p>
           Creamos contenido médico claro, confiable y humano para que puedas tomar mejores decisiones
           sobre tu bienestar, entender tus diagnósticos y reconocer cuándo algo necesita atención.
@@ -341,13 +324,15 @@
   </footer>
 
   <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".hero-nav");
 
-    menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("active");
+        });
     });
-  </script>
+</script>
 
 </body>
 </html>
