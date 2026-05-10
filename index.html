@@ -90,7 +90,7 @@
   <!-- SECCIÓN: ARTÍCULOS DESTACADOS -->
 
   <section class="articles-section" aria-labelledby="articles-title">
-    <div class="container">
+    <div class="container articles-content">
 
       <div class="section-header">
         <span class="section-tag">Contenido para pacientes</span>
@@ -111,7 +111,6 @@
               Te explicamos cómo interpretar mejor la información médica online
               y cuándo consultar con un profesional.
             </p>
-            <a href="#" class="article-link">Leer artículo</a>
           </div>
         </article>
 
@@ -161,17 +160,13 @@
   <section class="resources-section" aria-labelledby="resources-title">
     <div class="container">
 
-      <div class="resources-header">
-        <div>
-          <span class="section-tag">Herramientas prácticas</span>
-          <h2 id="resources-title">Recursos para el cuidado de tu salud</h2>
-          <p>
-            Guías, journals y cursos pensados para ayudarte a organizar tu salud
-            y entender mejor lo que pasa en tu cuerpo.
-          </p>
-        </div>
-        <a href="#" class="view-all-link">Ver todos</a>
-      </div>
+      <header class="resources-header">               
+        <span class="section-tag">Herramientas prácticas</span>        
+        <h2 id="resources-title">Recursos para el cuidado de tu salud</h2>        
+        <p>
+          Guías, journals y cursos pensados para ayudarte a organizar tu salud y entender mejor lo que pasa en tu cuerpo.
+        </p>        
+      </header>
 
       <div class="resources-carousel">
 
@@ -218,7 +213,7 @@
           <img src="IMAGENES PAG PRINCIPAL/Recurso img 4.jpg" alt="Curso virtual sobre Artritis Reumatoide">
           <div class="resource-content">
             <span class="resource-type">Curso virtual</span>
-            <h3>Entiende tus enfermedad: curso básico para pacientes</h3>
+            <h3>Entiende tu enfermedad: curso básico para pacientes</h3>
             <p>Videos cortos para entender la AR, tus síntomas y señales de alerta.</p>
             <div class="resource-footer">
               <span class="resource-price">Próximamente</span>
@@ -250,24 +245,30 @@
   <section class="consult-section">
     <div class="container consult-content">
 
-      <div class="consult-text">
-        <span class="section-tag">Atención médica</span>
-        <h2>Agenda tu consulta médica</h2>
-        <p>
-          Si tienes dudas sobre tu diagnóstico, síntomas o tratamiento,
-          puedes agendar una consulta con nosotros.
-        </p>
-        <p>
-          Te ayudamos a entender tu salud de forma clara, cercana y basada en evidencia.
-        </p>
+      <div class="consult-info">
+        
+        <header class="consult-header">
+          <span class="section-tag">Atención médica</span>
+          <h2>Agenda tu consulta médica</h2>
+          <p>
+            Si tienes dudas sobre tu diagnóstico, síntomas o tratamiento,
+            puedes agendar una consulta con nosotros.
+          </p>
+          <p>
+            Te ayudamos a entender tu salud de forma clara, cercana y basada en evidencia.
+          </p>
+        </header>
+
         <ul class="consult-list">
-          <li>✔ Atención virtual y presencial</li>
-          <li>✔ Nefrología</li>
-          <li>✔ Reumatología</li>
+          <li>Atención virtual y presencial</li>
+          <li>Nefrología</li>
+          <li>Reumatología</li>
         </ul>
+
         <div class="consult-buttons">
           <a href="#" class="btn-primary">Agendar consulta</a>
         </div>
+        
       </div>
 
       <div class="consult-image">
@@ -277,38 +278,20 @@
     </div>
   </section>
 
-  <!-- SECCIÓN: CTA FINAL -->
-
-    <section class="final-cta" aria-labelledby="final-cta-title">
-      <div class="final-cta-overlay">
-    
-        <div class="container final-cta-content">
-          <h2 id="final-cta-title">Entender tu salud también es una forma de cuidarte</h2>
-          <p>
-            Aprende, resuelve tus dudas y toma mejores decisiones con información médica clara y confiable.
-          </p>
-          <div class="final-cta-buttons">
-            <a href="#" class="btn-primary">Agendar consulta</a>
-            <a href="#" class="btn-light">Explorar artículos</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
   <!-- FOOTER -->
   
   <footer class="footer">
     <div class="container footer-content">
 
-      <section class="footer-brand">
+      <div class="footer-brand">
         <div class="brand">
           <div class="logo-circle"></div>
-            <h2 class="logo-text">Medicina Traducida</h2>
+            <p class="logo-text">Medicina Traducida</p>
         </div>
         <p>
           Información médica clara, confiable y humana para ayudarte a entender mejor tu salud.
         </p>
-      </section>
+      </div>
     
       <nav class="footer-menu" aria-label="Menú del pie de página">
         <h3>Menú</h3>
