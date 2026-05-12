@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Información médica clara y confiable explicada para pacientes. Aprende sobre salud, enfermedades y bienestar con Medicina Traducida.">
   <title>Medicina Traducida</title>
   <link rel="stylesheet" href="MT-estilo.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
   
-  <!-- INICIO: NAV + HERO -->
-
-  <header class="home-hero">
+<!-- INICIO: NAV + HERO -->
+<header class="home-hero">
     <img src="IMAGENES PAG PRINCIPAL/IMG Pag principal 3.jpg" alt="Consulta médica familiar" class="hero-bg-img">    
     <div class="hero-overlay">
       <div class="container home-hero-content">
@@ -30,24 +29,25 @@
         </div>
 
         <div class="hero-top">          
-          <button class="menu-toggle">☰</button>
+          <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
           <nav class="hero-nav">
             <ul class="menu">
-              <li><a href="#">Quiénes somos</a></li>
-              <li><a href="#">Artículos</a></li>
-              <li><a href="#">Recursos digitales</a></li>
-              <li><a href="#">Agendar cita</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><a href="quienes-somos.html">Quiénes somos</a></li>
+              <li><a href="articulos.html">Artículos</a></li>
+              <li><a href="recursos.html">Recursos digitales</a></li>
+              <li><a href="consultas.html">Agendar cita</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
             </ul>
           </nav>
         </div>
 
       </div>
     </div>
-  </header>
+</header>
+
+<main>
 
   <!-- SECCIÓN: INTRODUCCIÓN / PROPUESTA DE VALOR -->
-
   <section class="intro-section" aria-labelledby="intro-title">
     <div class="container intro-content">
 
@@ -71,7 +71,7 @@
 
       </div>
 
-      <div class="intro-text">
+      <header class="section-header intro-text">
         <span class="section-tag">Medicina explicada para pacientes</span>
         <h2 id="intro-title">La medicina no debería ser difícil de entender</h2>
         <p>
@@ -82,28 +82,27 @@
           Creamos contenido médico claro, confiable y humano para que puedas tomar mejores decisiones
           sobre tu bienestar, entender tus diagnósticos y reconocer cuándo algo necesita atención.
         </p>
-      </div>
+      </header>
 
     </div>
   </section>
 
   <!-- SECCIÓN: ARTÍCULOS DESTACADOS -->
-
   <section class="articles-section" aria-labelledby="articles-title">
     <div class="container articles-content">
 
-      <div class="section-header">
+      <header class="section-header articles-intro">
         <span class="section-tag">Contenido para pacientes</span>
         <h2 id="articles-title">Aprende sobre tu salud</h2>
         <p>
           Artículos claros, prácticos y confiables para entender mejor tu cuerpo,
           tus síntomas y tus diagnósticos.
         </p>
-      </div>
+      </header>
 
       <div class="articles-layout">
         <article class="featured-article">
-          <img src="IMAGENES PAG PRINCIPAL/Articulo img 1.jpg" alt="Paciente leyendo información médica">
+          <img src="IMAGENES PAG PRINCIPAL/Articulo img 1.jpg" alt="Paciente leyendo información médica"  loading="lazy">
           <div class="article-info">
             <span class="article-category">Salud general</span>
             <h3>¿Por qué buscar síntomas en internet puede confundirte más?</h3>
@@ -116,8 +115,9 @@
 
         <aside class="popular-articles" aria-labelledby="popular-title">
           <h3 id="popular-title">Lo más leído</h3>
+          
           <article class="small-article">
-            <img src="IMAGENES PAG PRINCIPAL/Articulo img 2.jpg" alt="Persona tomándose la presión arterial">
+            <img src="IMAGENES PAG PRINCIPAL/Articulo img 2.jpg" alt="Persona tomándose la presión arterial"  loading="lazy">
             <div>
               <span class="article-category">Signos de alarma</span>
               <h4>¿Cuándo una presión alta debe preocuparte?</h4>
@@ -125,7 +125,7 @@
           </article>
 
           <article class="small-article">
-            <img src="IMAGENES PAG PRINCIPAL/Articulo img 3.jpg" alt="Pastillas y medicamentos sobre una mesa">
+            <img src="IMAGENES PAG PRINCIPAL/Articulo img 3.jpg" alt="Pastillas y medicamentos sobre una mesa"  loading="lazy">
             <div>
               <span class="article-category">Medicación</span>
               <h4>Errores frecuentes al tomar medicamentos</h4>
@@ -133,7 +133,7 @@
           </article>
 
           <article class="small-article">
-            <img src="IMAGENES PAG PRINCIPAL/Articulo img 4.jpg" alt="Persona con dolor en la rodilla">
+            <img src="IMAGENES PAG PRINCIPAL/Articulo img 4.jpg" alt="Persona con dolor en la rodilla"  loading="lazy">
             <div>
               <span class="article-category">Reumatología</span>
               <h4>Dolor articular: cuándo consultar y cuándo observar</h4>
@@ -141,7 +141,7 @@
           </article>
 
           <article class="small-article">
-            <img src="IMAGENES PAG PRINCIPAL/Articulo img 5.jpg" alt="Vaso de agua junto a exámenes médicos">
+            <img src="IMAGENES PAG PRINCIPAL/Articulo img 5.jpg" alt="Vaso de agua junto a exámenes médicos"  loading="lazy">
             <div>
               <span class="article-category">Nefrología</span>
               <h4>¿Qué significa tener creatinina alta?</h4>
@@ -156,11 +156,10 @@
   </section>
 
   <!-- SECCIÓN: RECURSOS / PRODUCTOS DIGITALES -->
-
   <section class="resources-section" aria-labelledby="resources-title">
-    <div class="container">
+    <div class="container resources-content">
 
-      <header class="resources-header">               
+      <header class="section-header resources-intro">               
         <span class="section-tag">Herramientas prácticas</span>        
         <h2 id="resources-title">Recursos para el cuidado de tu salud</h2>        
         <p>
@@ -171,7 +170,7 @@
       <div class="resources-carousel">
 
         <article class="resource-card">
-          <img src="IMAGENES PAG PRINCIPAL/Recurso img 1.jpg" alt="Guía digital para controlar la presión arterial">
+          <img src="IMAGENES PAG PRINCIPAL/Recurso img 1.jpg" alt="Guía digital para controlar la presión arterial"  loading="lazy">
           <div class="resource-content">
             <span class="resource-type">PDF gratuito</span>
             <h3>Guía rápida para entender tu presión arterial</h3>
@@ -184,7 +183,7 @@
         </article>
 
         <article class="resource-card">
-          <img src="IMAGENES PAG PRINCIPAL/Recurso img 2.jpg" alt="Journal para registrar síntomas diarios">
+          <img src="IMAGENES PAG PRINCIPAL/Recurso img 2.jpg" alt="Journal para registrar síntomas diarios"  loading="lazy">
           <div class="resource-content">
             <span class="resource-type">Journal</span>
             <h3>Diario de síntomas para llevar a consulta</h3>
@@ -197,7 +196,7 @@
         </article>
 
         <article class="resource-card">
-          <img src="IMAGENES PAG PRINCIPAL/Recurso img 3.jpg" alt="Checklist médica antes de ir a consulta">
+          <img src="IMAGENES PAG PRINCIPAL/Recurso img 3.jpg" alt="Checklist médica antes de ir a consulta"  loading="lazy">
           <div class="resource-content">
             <span class="resource-type">Checklist</span>
             <h3>Checklist: qué llevar a tu consulta médica</h3>
@@ -210,7 +209,7 @@
         </article>
 
         <article class="resource-card">
-          <img src="IMAGENES PAG PRINCIPAL/Recurso img 4.jpg" alt="Curso virtual sobre Artritis Reumatoide">
+          <img src="IMAGENES PAG PRINCIPAL/Recurso img 4.jpg" alt="Curso virtual sobre Artritis Reumatoide"  loading="lazy">
           <div class="resource-content">
             <span class="resource-type">Curso virtual</span>
             <h3>Entiende tu enfermedad: curso básico para pacientes</h3>
@@ -223,7 +222,7 @@
         </article>
 
         <article class="resource-card">
-          <img src="IMAGENES PAG PRINCIPAL/Recurso img 5.jpg" alt="Planificador de medicamentos">
+          <img src="IMAGENES PAG PRINCIPAL/Recurso img 5.jpg" alt="Planificador de medicamentos"  loading="lazy">
           <div class="resource-content">
             <span class="resource-type">PDF editable</span>
             <h3>Planificador semanal de medicamentos</h3>
@@ -241,15 +240,12 @@
   </section>
 
   <!-- SECCIÓN: CONSULTAS -->
-
-  <section class="consult-section">
+  <section class="consult-section" aria-labelledby="consult-title">
     <div class="container consult-content">
 
-      <div class="consult-info">
-        
-        <header class="consult-header">
+      <header class="section-header consult-intro">
           <span class="section-tag">Atención médica</span>
-          <h2>Agenda tu consulta médica</h2>
+          <h2 id="consult-title">Agenda tu consulta médica</h2>
           <p>
             Si tienes dudas sobre tu diagnóstico, síntomas o tratamiento,
             puedes agendar una consulta con nosotros.
@@ -257,7 +253,9 @@
           <p>
             Te ayudamos a entender tu salud de forma clara, cercana y basada en evidencia.
           </p>
-        </header>
+      </header>
+
+      <div class="consult-info">
 
         <ul class="consult-list">
           <li>Atención virtual y presencial</li>
@@ -272,15 +270,16 @@
       </div>
 
       <div class="consult-image">
-        <img src="IMAGENES PAG PRINCIPAL/Consulta img 1.jpg" alt="Consulta médica">
+        <img src="IMAGENES PAG PRINCIPAL/Consulta img 1.jpg" alt="Consulta médica"  loading="lazy">
       </div>
 
     </div>
   </section>
 
-  <!-- FOOTER -->
-  
-  <footer class="footer">
+</main>
+
+<!-- FOOTER --> 
+<footer class="footer">
     <div class="container footer-content">
 
       <div class="footer-brand">
@@ -295,11 +294,13 @@
     
       <nav class="footer-menu" aria-label="Menú del pie de página">
         <h3>Menú</h3>
-        <a href="#">Inicio</a>
-        <a href="#">Artículos</a>
-        <a href="#">Cursos</a>
-        <a href="#">Consultas</a>
-        <a href="#">Contacto</a>
+        <ul class="footer-menu-list">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Artículos</a></li>
+          <li><a href="#">Cursos</a></li>
+          <li><a href="#">Consultas</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
       </nav>
 
     </div>
@@ -308,7 +309,7 @@
       <p>© 2026 Medicina Traducida. Todos los derechos reservados.</p>
     </div>
   
-  </footer>
+</footer>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -319,7 +320,7 @@
         nav.classList.toggle("active");
         });
     });
-</script>
+  </script>
 
 </body>
 </html>

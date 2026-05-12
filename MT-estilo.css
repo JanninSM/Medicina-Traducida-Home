@@ -1,4 +1,4 @@
-/* ======================= VARIABLES (DISEÑO GLOBAL) ======================== */
+/* ======================= (DISEÑO GLOBAL) ======================== */
 
 :root {
 
@@ -14,7 +14,6 @@
 
     /* NEUTRALES */
     --white: #FFFFFF; 
-    --background: #F7FAFC; 
     --gray-light: #E5E7EB; 
     --gray: #9CA3AF; 
     --text: #1F2937;
@@ -44,7 +43,8 @@
     --radius-pill: 999px;
 }
 
-/* ========================= RESET ========================= */
+
+/*  ==  RESET  ==  */
 
 * {
     margin: 0; 
@@ -52,7 +52,8 @@
     box-sizing: border-box;
 }
 
-/* ========================= GENERAL ======================== */
+
+/*  ==  BASE GENERAL  ==  */
 
 html {
   font-size: 100%;    /*16px*/
@@ -61,7 +62,7 @@ html {
 
 body {
     font-family: var(--font-text);
-    background-color: var(--background);
+    background-color: var(--white);
     color: var(--text);
     line-height: 1.6;
 }
@@ -71,25 +72,42 @@ h1, h2, h3 {
     line-height: 1.2;
 }
 
-a {
-  color: inherit;
+h2 {
+    
 }
 
-/* IMAGENES */
+p {
+    font-size: 1.25rem;          /* 20px */
+    color: var(--text-muted);
+    text-align: justify;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
 img {
   display: block;
   max-width: 100%;
 }
 
-/* CONTENEDOR */
+
+/*  ==  LAYOUT  ==  */
+
+section {
+    padding-block: clamp(2rem, 5vw, 5rem); /* 32px a 80px */
+    background-color: var(--white);
+    position: relative;
+}
 
 .container {
     width: min(100% - 4rem, 1300px);
     margin-inline: auto;
 }
 
-/*  BOTONES  */
+
+/*  ==  COMPONENETES  ==  */
 
 .btn-primary {
     display: inline-block;
@@ -106,6 +124,28 @@ img {
     background-color: var(--primary-dark);
     transform: scale(1.03);
 }
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm); /* 16px */
+    margin-bottom: var(--space-xl); /* 48px */
+}
+
+.section-tag {
+    display: inline-block;
+    color: var(--primary-dark);
+    background-color: var(--primary-light-soft);
+    padding: 0.5rem 1rem;   /* 8px arriba y abajo, 12px lados */
+    border-radius: var(--radius-pill);
+    font-size: 1.5rem;  /* 24px */
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+    text-align: center;
+    width: fit-content;
+}
+
 
 
 /* ========================= INICIO: NAV + HERO ======================== */
@@ -245,12 +285,6 @@ img {
 
 /* ======================== SECCIÓN INTRO / CONFIANZA ======================= */
 
-.intro-section {
-    background-color: var(--white);
-    padding-block: clamp(2rem, 5vw, 5rem); /* 32px a 80px */
-
-}
-
 .intro-content {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
@@ -294,7 +328,7 @@ img {
 .doctor-card p {
     color: var(--primary-dark);
     font-weight: 600;
-    font-size: 16px;
+    text-align: center;    
 }
 
 /* efecto escalera */
@@ -308,19 +342,6 @@ img {
     margin-bottom: auto;
 }
 
-.section-tag {
-    display: inline-block;
-    color: var(--primary-dark);
-    background-color: var(--primary-light-soft);
-    padding: 0.5rem 0.75rem; /* 8px arriba y abajo, 12px lados */
-    border-radius: var(--radius-pill);
-    font-size: 1.5rem; /* 24px */
-    font-weight: 600;
-    margin-bottom: var(--space-md);
-    text-align: center;
-    width: fit-content;
-}
-
 .intro-text h2 {
     font-size: 42px;
     line-height: 1.15;
@@ -328,20 +349,10 @@ img {
     margin-bottom: var(--space-md);
 }
 
-.intro-text p {
-    font-size: 18px;
-    color: #4B5563;
-    margin-bottom: var(--space-sm);
-    text-align: justify
-}
-
-
 /* ======================================== SECCIÓN ARTÍCULOS ======================================== */
 
 .articles-section {
     background-color: var(--primary-light-soft);
-    padding-block: clamp(2rem, 5vw, 5rem); /* 32px a 80px */
-    position: relative;
 }
 
 .articles-section::before,
@@ -372,12 +383,7 @@ img {
   );
 }
 
-.section-header {
-    max-width: 100%;
-    margin-bottom: clamp(2rem, 2.5vw, 4rem);
-}
-
-.section-header .section-tag {
+.articles-intro .section-tag {
     background-color: var(--white);
 }
 
@@ -386,11 +392,6 @@ img {
     line-height: 1.15;
     color: var(--secondary);
     margin-bottom: var(--space-sm);
-}
-
-.section-header p {
-    font-size: 18px;
-    color: #4B5563;
 }
 
 .articles-layout {
@@ -480,28 +481,10 @@ img {
 
 /* =========================== SECCIÓN RECURSOS ============================= */
 
-.resources-section {
-    background-color: var(--white);
-    padding-block: clamp(2rem, 5vw, 5rem); /* 32px a 80px */
-}
-
-.resources-header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-sm); /* 16px */
-    margin-bottom: var(--space-xl); /* 48px */
-}
-
 .resources-header h2 {
     font-size: clamp(2rem, 4vw, 2.75rem); /* 32px a 44px */
     color: var(--secondary);
     margin-bottom: var(--space-sm); /* 16px */
-}
-
-.resources-header p {
-    font-size: 1.25rem; /* 20px */
-    color: var(--text-muted);
 }
 
 /* Carrusel horizontal sin JS */
@@ -609,12 +592,11 @@ img {
 }
 
 
+
 /* ========================= SECCIÓN CONSULTA ========================= */
 
 .consult-section {
-    position: relative;
     background-color: var(--primary-light-soft);
-    padding-block: clamp(2rem, 5vw, 5rem); /* 32px a 80px */
 }
 
 .consult-section::before,
@@ -643,15 +625,7 @@ img {
     gap: var(--space-xl); /* 48px */
 }
 
-.consult-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-sm); /* 16px */
-  margin-bottom: var(--space-xl); /* 48px */
-}
-
-.consult-header .section-tag {
+.consult-intro .section-tag {
     background-color: var(--white);
 }
 
@@ -659,11 +633,6 @@ img {
     font-size: clamp(2rem, 4vw, 2.75rem); /* 32px a 44px */
     color: var(--secondary);
     margin-bottom: var(--space-sm); /* 16px */
-}
-
-.consult-header p {
-    font-size: 1.25rem; /* 20px */
-    color: var(--text-muted);
 }
 
 .consult-list {
