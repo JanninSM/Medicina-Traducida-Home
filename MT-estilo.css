@@ -544,7 +544,6 @@ section {
 }
 
 
-
 /* ========================= SECCIÓN CONSULTA ========================= */
 
 .consult-section {
@@ -565,8 +564,6 @@ section {
     flex-direction: column;    
     position: relative;
     z-index: 1;
-    gap: clamp(2rem, 5vw, 4rem);
-    align-items: start;
 }
 
 .consult-intro .section-tag {
@@ -574,11 +571,10 @@ section {
 }
 
 .consult-info {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-self: flex-end;
-    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4rem);
 }
 
 .consult-text {
@@ -590,6 +586,7 @@ section {
     display: grid;
     gap: var(--space-xs); /* 8px */
     list-style: none;
+    text-indent: 2rem; /* espacio para el ícono */
 }
 
 .consult-list li {
@@ -612,23 +609,22 @@ section {
 .consult-buttons {
     margin-top: var(--space-xl); /* 48px */
     font-size: 1.25rem; /* 20px */
+    align-self: center;
 }
 
 /* Imagen */
 
 .consult-image {
-    width: min(100% - 20rem, 800px);
-    margin:
-        clamp(2rem, 5vw, 4rem)
-        auto
-        0;
+    width: 100%;
 }
 
 .consult-image img {
     width: 100%;
-    height: clamp(18rem, 38vw, 34rem);
+    height: clamp(15rem, 24vw, 25rem);
     border-radius: var(--radius-md);
     object-fit: cover;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.12);
+
 }
 
 
@@ -686,11 +682,13 @@ section {
 
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.18);
-    text-align: center;
     padding-top: var(--space-md); /* 24px */
     color: var(--white);
 }
 
+.final {
+    text-align: center;
+}
 
 
 
