@@ -89,7 +89,7 @@ img {
 /*  =====  LAYOUT  =====  */
 
 section {
-    padding-block: clamp(3.5rem, 5vw, 5rem); /* 56px a 80px */
+    padding-block: clamp(3rem, 4vw, 3.5rem);
     background-color: var(--white);
     position: relative;
 }
@@ -121,8 +121,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--space-sm); /* 16px */
-    margin-bottom: var(--space-xl); /* 48px */
+    gap: var(--space-sm);            /* 16px */
+    margin-bottom: var(--space-xl);  /* 48px */
 }
 
 .section-tag {
