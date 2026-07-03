@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Artículos | Medicina Traducida</title>
   <link rel="stylesheet" href="articulos.css">
+  <script src="articulos.js" defer></script>
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,169 +16,487 @@
 
 <body>
 
-  <!-- SECCIÓN: BARRA DE INICIO / HEADER -->
+  <!-- CABECERA: BARRA DE INICIO / HEADER -->
 
-  <header class="site-header">
-    <div class="container header-container">
+<header class="site-header">
+  <div class="container header-container">
 
-      <a href="index.html" class="brand">
-        <span class="brand-logo"></span>
-        <span class="brand-name">Medicina Traducida</span>
-      </a>
+    <a href="index.html" class="brand">
+      <span class="brand-logo"></span>
+      <span class="brand-name">Medicina Traducida</span>
+    </a>
 
-      <nav class="main-nav">
-        <a href="index.html">Inicio</a>
-        <a href="quienes-somos.html">Quiénes somos</a>
-        <a href="articulos.html" class="active">Artículos</a>
-        <a href="recursos.html">Recursos digitales</a>
-        <a href="consultas.html">Agendar cita</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
+    <nav class="main-nav">
+      <a href="index.html">Inicio</a>
+      <a href="quienes-somos.html">Quiénes somos</a>
+      <a href="articulos.html" class="active">Artículos</a>
+      <a href="recursos.html">Recursos digitales</a>
+      <a href="consultas.html">Agendar cita</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- SECCIÓN 1: Título e inicio -->
+  <section class="articles-hero">
+    <div class="container articles-hero-container">
+
+      <div class="hero-content">
+        <h1>Aprende sobre tu salud sin complicaciones</h1>
+        <p> Información médica clara, práctica y confiable para entender mejor tu cuerpo, tus síntomas y tus diagnósticos. </p>
+        <div class="hero-actions">
+          <a href="#articulos" class="btn-primary">Buscar artículos</a>
+          <a href="#videos" class="btn-secondary">Ver videos</a>
+          <a href="#historias" class="btn-secondary">Ver historias</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+          <img src="IMG PAG ARTICULOS/IMG INICIAL 3.png" alt="Persona revisando información médica en una computadora">
+      </div>
 
     </div>
-  </header>
+  </section>
 
-  <main>
+  <!-- SECCIÓN 2: Buscador -->
+  <section class="articles-search-section" id="articulos">
+    <div class="container">
 
-    <section class="articles-hero">
-      <div class="container articles-hero-container">
-
-        <div class="hero-content">
-          <span class="section-tag">Artículos médicos</span>
-
-          <h1>Aprende sobre tu salud sin complicaciones</h1>
-
-          <p>
-            Información médica clara, práctica y confiable para entender mejor tu cuerpo,
-            tus síntomas y tus diagnósticos.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#categorias" class="btn-primary">Explorar categorías</a>
-            <a href="#videos" class="btn-secondary">Ver videos</a>
-          </div>
-        </div>
-
-        <div class="hero-image">
-          <img src="IMG PAG ARTICULOS/IMG INICIAL 2.png" alt="Persona revisando información médica en una computadora">
-        </div>
-
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="search" id="articleSearch" placeholder="Buscar por tema, enfermedad o palabra clave..." >
       </div>
-    </section>
 
-    <section class="featured-section">
-      <div class="container featured-layout">
+      <div class="category-filters">
+        <button class="filter-btn active" data-category="todos">Todos</button>
+        <button class="filter-btn" data-category="nefrologia">Nefrología</button>
+        <button class="filter-btn" data-category="reumatologia">Reumatología</button>
+        <button class="filter-btn" data-category="nutricion">Nutrición</button>
+        <button class="filter-btn" data-category="dermatologia">Dermatología</button>
+      </div>
 
-        <article class="featured-article">
-          <img src="img/articulo-destacado.jpg" alt="Persona buscando síntomas médicos en internet">
+      <div class="articles-grid" id="articlesGrid"> 
 
-          <span class="article-category">Salud general</span>
-
-          <h2>¿Por qué buscar síntomas en internet puede confundirte más?</h2>
-
-          <p>
-            Te explicamos cómo interpretar mejor la información médica online
-            y cuándo consultar con un profesional.
-          </p>
-
-          <a href="articulo-ejemplo.html" class="read-more">Leer artículo</a>
+        <article class="article-card" data-category="nefrologia" data-date="2026-05-29">
+          <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=900&q=80" alt="">
+          <div class="article-content">
+            <span class="article-tag">Nefrología</span>
+            <h3>Creatinina alta: ¿siempre significa daño renal?</h3>
+            <p>Una explicación sencilla sobre qué mide la creatinina y cuándo debe preocuparte.</p>
+            <time>29 mayo 2026</time>
+          </div>
         </article>
 
-        <section class="most-read">
-          <h2>Lo más leído</h2>
-
-          <div class="most-read-list">
-
-            <a href="#" class="most-read-card">
-              <img src="img/alarma-presion.jpg" alt="Toma de presión arterial">
-              <div>
-                <h3>Signos de alarma</h3>
-                <p>¿Cuándo una presión alta debe preocuparte?</p>
-              </div>
-            </a>
-
-            <a href="#" class="most-read-card">
-              <img src="img/medicacion.jpg" alt="Medicamentos sobre una mesa">
-              <div>
-                <h3>Medicación</h3>
-                <p>Errores frecuentes al tomar medicamentos</p>
-              </div>
-            </a>
-
-            <a href="#" class="most-read-card">
-              <img src="img/dolor-articular.jpg" alt="Persona con dolor en la rodilla">
-              <div>
-                <h3>Reumatología</h3>
-                <p>Dolor articular: cuándo consultar y cuándo observar</p>
-              </div>
-            </a>
-
-            <a href="#" class="most-read-card">
-              <img src="img/creatinina.jpg" alt="Examen de laboratorio">
-              <div>
-                <h3>Nefrología</h3>
-                <p>¿Qué significa tener creatinina alta?</p>
-              </div>
-            </a>
-
+        <article class="article-card" data-category="reumatologia" data-date="2026-05-28">
+          <img src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&w=900&q=80" alt="">
+          <div class="article-content">
+            <span class="article-tag">Reumatología</span>
+            <h3>Lupus: señales que no deberías ignorar</h3>
+            <p>Conoce síntomas frecuentes y cuándo consultar.</p>
+            <time>28 mayo 2026</time>
           </div>
-        </section>
+        </article>
 
+        <article class="article-card" data-category="nutricion" data-date="2026-05-27">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Nutrición</span>
+          <h3>¿El potasio siempre es malo para el riñón?</h3>
+          <p>Aprende cuándo limitarlo y cuándo no es necesario.</p>
+          <time>27 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="dermatologia" data-date="2026-05-26">
+        <img src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Dermatología</span>
+          <h3>Protector solar: cómo elegir uno de verdad</h3>
+          <p>Guía sencilla para escoger protector solar.</p>
+          <time>26 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="nefrologia" data-date="2026-05-25">
+        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Nefrología</span>
+          <h3>Orina espumosa: cuándo preocuparse</h3>
+          <p>Qué puede significar y cuándo pedir evaluación.</p>
+          <time>25 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="reumatologia" data-date="2026-05-24">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Reumatología</span>
+          <h3>Dolor articular: ¿artritis o cansancio?</h3>
+          <p>Diferencias importantes para identificar señales de alarma.</p>
+          <time>24 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="nutricion" data-date="2026-05-23">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Nutrición</span>
+          <h3>Proteína en la dieta: cuánto es suficiente</h3>
+          <p>Cómo adaptar la proteína según tus objetivos y salud.</p>
+          <time>23 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="nefrologia" data-date="2026-05-22">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Nefrología</span>
+          <h3>Presión alta y riñón: una relación peligrosa</h3>
+          <p>Por qué controlar la presión protege tus riñones.</p>
+          <time>22 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="dermatologia" data-date="2026-05-21">
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Dermatología</span>
+          <h3>Acné adulto: causas frecuentes</h3>
+          <p>Qué factores pueden empeorarlo.</p>
+          <time>21 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="nutricion" data-date="2026-05-20">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Nutrición</span>
+          <h3>Fibra y estreñimiento: cómo mejorar tu tránsito</h3>
+          <p>Ideas simples para cuidar tu digestión.</p>
+          <time>20 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="nefrologia" data-date="2026-05-19">
+        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Nefrología</span>
+          <h3>Microalbuminuria: qué significa</h3>
+          <p>Una señal temprana que no debe ignorarse.</p>
+          <time>19 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="reumatologia" data-date="2026-05-18">
+        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Reumatología</span>
+          <h3>Espondilitis anquilosante: síntomas iniciales</h3>
+          <p>Dolor lumbar inflamatorio explicado fácil.</p>
+          <time>18 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="dermatologia" data-date="2026-05-17">
+        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Dermatología</span>
+          <h3>Manchas en la piel: cuándo evaluarlas</h3>
+          <p>Señales que ameritan revisión médica.</p>
+          <time>17 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="nutricion" data-date="2026-05-16">
+        <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Nutrición</span>
+          <h3>Desayunos con más proteína y energía</h3>
+          <p>Ideas simples para empezar mejor el día.</p>
+          <time>16 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="nefrologia" data-date="2026-05-15">
+        <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Nefrología</span>
+          <h3>Diálisis: mitos frecuentes</h3>
+          <p>Lo que muchos creen y no siempre es cierto.</p>
+          <time>15 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="reumatologia" data-date="2026-05-14">
+        <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Reumatología</span>
+          <h3>Factor reumatoide positivo: ¿ya es artritis?</h3>
+          <p>Cómo interpretar este resultado.</p>
+          <time>14 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="dermatologia" data-date="2026-05-13">
+        <img src="https://images.unsplash.com/photo-1556228724-4b1e04b9e5c8?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Dermatología</span>
+          <h3>Rutina skincare básica y realista</h3>
+          <p>Menos pasos, más constancia.</p>
+          <time>13 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="nutricion" data-date="2026-05-12">
+        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Nutrición</span>
+          <h3>Comer saludable sin complicarse</h3>
+          <p>Cómo armar platos simples y balanceados.</p>
+          <time>12 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="nefrologia" data-date="2026-05-11">
+        <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Nefrología</span>
+          <h3>Enfermedad renal crónica: etapas explicadas</h3>
+          <p>Qué significa cada etapa y cómo cuidarte.</p>
+          <time>11 mayo 2026</time>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="reumatologia" data-date="2026-05-10">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="article-content">
+          <span class="article-tag">Reumatología</span>
+          <h3>ANA positivo: cuándo preocuparse</h3>
+          <p>No todo resultado positivo significa enfermedad.</p>
+          <time>10 mayo 2026</time>
+        </div>
+      </article>
+             
       </div>
+
+      <p class="no-results" id="noResults">No se encontraron artículos.</p>
+
+    </div>
     </section>
 
-    <section class="categories-section" id="categorias">
+  <!-- SECCIÓN 3: FRASE EDITORIAL -->
+  <section class="quote-section">
+    <img src="IMG PAG ARTICULOS/IMG FRASE 1.jpg" alt="Lectura de articulo" class="quote-bg-img">
+    
+    <div class="quote-overlay">
+    
       <div class="container">
-
-        <div class="section-header">
-          <span class="section-tag">Categorías</span>
-          <h2>Explora por especialidad</h2>
-        </div>
-
-        <div class="categories-grid">
-
-          <a href="#" class="category-card">
-            <h3>Ginecología</h3>
-            <p>Salud femenina, ciclos, síntomas y prevención.</p>
-          </a>
-
-          <a href="#" class="category-card">
-            <h3>Dermatología</h3>
-            <p>Piel, acné, manchas, lesiones y cuidados.</p>
-          </a>
-
-          <a href="#" class="category-card">
-            <h3>Nutrición</h3>
-            <p>Alimentación, hábitos y bienestar metabólico.</p>
-          </a>
-
-          <a href="#" class="category-card">
-            <h3>Endocrinología</h3>
-            <p>Hormonas, tiroides, diabetes y metabolismo.</p>
-          </a>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="quote-section">
-      <div class="container">
-        <h2>La medicina debería entenderse, no sentirse imposible.</h2>
+        <h2>La salud debería entenderse, no sentirse imposible.</h2>
         <p>
-          En Medicina Traducida convertimos información médica compleja en explicaciones claras,
-          visuales y útiles para tu día a día.
+          En Medicina Traducida convertimos información médica compleja en explicaciones claras, visuales y útiles para tu día a día.
         </p>
       </div>
-    </section>
 
-    <section class="stories-section">
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: videos -->
+  <section class="videos-section" id="videos">
+    <div class="container">
+
+      <header class="videos-header">
+        <div>
+          <span class="section-tag">Últimos videos</span>
+          <h2>Aprende salud en minutos</h2>
+        </div>
+
+        <a 
+          href="https://www.youtube.com/@MedicinaTraducida" 
+          target="_blank" 
+          class="videos-link"
+        >
+          Ver todos los videos
+        </a>
+      </header>
+
+      <div class="videos-carousel-wrapper">
+
+        <button class="carousel-btn prev-btn" aria-label="Video anterior">
+          ‹
+        </button>
+
+        <div class="videos-carousel">
+          <div class="videos-track">
+
+            <article class="video-card" data-url="https://www.youtube.com/watch?v=qp8wx3KS_Bs"   data-category="reumatologia" >
+
+              <div class="video-thumb">
+                <img src="https://img.youtube.com/vi/qp8wx3KS_Bs/hqdefault.jpg" alt="Miniatura de video">
+                <span class="play-icon">▶</span>
+              </div>
+
+              <h3>
+                🚨¿Es artritis reumatoide? 5 señales para identificarla a tiempo
+              </h3>
+
+              <div class="video-meta">
+                <span>▶ 9 min</span>
+                <span>01/06/26</span>
+              </div>
+
+            </article>
+
+            <article class="video-card" data-url="https://www.youtube.com/watch?v=azQnVrcquUs"   data-category="reumatologia" >
+
+              <div class="video-thumb">
+                <img src="https://img.youtube.com/vi/azQnVrcquUs/hqdefault.jpg" alt="Miniatura de video">
+                <span class="play-icon">▶</span>
+              </div>
+
+              <h3>
+                ✅ 3 meses - ¿Está funcionando tu tratamiento de la artritis?: Tratamiento de la Artritis Reumatoide
+              </h3>
+
+              <div class="video-meta">
+                <span>▶ 12 min</span>
+                <span>18/05/26</span>
+              </div>
+
+            </article>
+
+            <article class="video-card" data-url="https://www.youtube.com/watch?v=Uf95qXvHpJM"   data-category="reumatologia" >
+
+              <div class="video-thumb">
+                <img src="https://img.youtube.com/vi/Uf95qXvHpJM/hqdefault.jpg" alt="Miniatura de video">
+                <span class="play-icon">▶</span>
+              </div>
+
+              <h3>
+                ✅ Artritis reumatoide y el riesgo de desarrollar CÁNCER - ¿Tener artritis da cáncer?
+              </h3>
+
+              <div class="video-meta">
+                <span>▶ 15 min</span>
+                <span>11/05/26</span>
+              </div>
+
+            </article>
+
+            <article class="video-card" data-url="https://www.youtube.com/watch?v=B6e8zu3-ApA"   data-category="reumatologia" >
+
+              <div class="video-thumb">
+                <img src="https://img.youtube.com/vi/B6e8zu3-ApA/hqdefault.jpg" alt="Miniatura de video">
+                <span class="play-icon">▶</span>
+              </div>
+
+              <h3> ✅ ¿Estás tomando las vitaminas correctas? La verdad aquí </h3>
+
+              <div class="video-meta">
+                <span>▶ 24 min</span>
+                <span>04/05/26</span>
+              </div>
+
+            </article>
+
+            <article class="video-card">
+              <a href="#" class="video-thumb">
+                <img src="img/video-5.jpg" alt="Miniatura de video">
+                <span class="play-icon">▶</span>
+              </a>
+              <h3>¿La espuma en la orina siempre es mala?</h3>
+              <div class="video-meta">
+                <span>▶ 4 min</span>
+                <span>01/06/26</span>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a href="#" class="video-thumb">
+                <img src="img/video-6.jpg" alt="Miniatura de video">
+                <span class="play-icon">▶</span>
+              </a>
+              <h3>Diabetes y enfermedad renal: explicación sencilla</h3>
+              <div class="video-meta">
+                <span>▶ 9 min</span>
+                <span>31/05/26</span>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a href="#" class="video-thumb">
+                <img src="img/video-7.jpg" alt="Miniatura de video">
+                <span class="play-icon">▶</span>
+              </a>
+              <h3>¿Cuánta agua debo tomar realmente?</h3>
+              <div class="video-meta">
+                <span>▶ 6 min</span>
+                <span>30/05/26</span>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a href="#" class="video-thumb">
+                <img src="img/video-8.jpg" alt="Miniatura de video">
+                <span class="play-icon">▶</span>
+              </a>
+              <h3>Medicamentos que pueden afectar tus riñones</h3>
+              <div class="video-meta">
+                <span>▶ 10 min</span>
+                <span>29/05/26</span>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a href="#" class="video-thumb">
+                <img src="img/video-9.jpg" alt="Miniatura de video">
+                <span class="play-icon">▶</span>
+              </a>
+              <h3>Dolor lumbar: ¿riñón o músculo?</h3>
+              <div class="video-meta">
+                <span>▶ 5 min</span>
+                <span>28/05/26</span>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a href="#" class="video-thumb">
+                <img src="img/video-10.jpg" alt="Miniatura de video">
+                <span class="play-icon">▶</span>
+              </a>
+              <h3>Cómo prepararte para una consulta médica</h3>
+              <div class="video-meta">
+                <span>▶ 7 min</span>
+                <span>27/05/26</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <button class="carousel-btn next-btn" aria-label="Video siguiente">
+          ›
+        </button>
+
+      </div>
+
+      <div class="carousel-dots"></div>
+
+    </div>
+  </section>
+
+
+  <!-- SECCIÓN 5: historias -->
+
+    <section class="stories-section" id="historias">
       <div class="container">
 
-        <div class="section-header">
+        <header class="section-header">
           <span class="section-tag">Historias</span>
           <h2>Historias de pacientes</h2>
-        </div>
+        </header>
 
         <div class="stories-grid">
 
@@ -209,53 +529,14 @@
       </div>
     </section>
 
-    <section class="videos-section" id="videos">
-      <div class="container">
+</main>
 
-        <div class="section-header">
-          <span class="section-tag">Videos</span>
-          <h2>Nuevos videos</h2>
-        </div>
-
-        <div class="videos-grid">
-
-          <article class="video-card">
-            <div class="video-thumbnail">
-              <img src="img/video-1.jpg" alt="Miniatura de video médico">
-              <span class="play-icon">▶</span>
-            </div>
-            <h3>¿Cuándo una molestia necesita evaluación médica?</h3>
-          </article>
-
-          <article class="video-card">
-            <div class="video-thumbnail">
-              <img src="img/video-2.jpg" alt="Miniatura de video sobre salud">
-              <span class="play-icon">▶</span>
-            </div>
-            <h3>Errores frecuentes al interpretar síntomas</h3>
-          </article>
-
-          <article class="video-card">
-            <div class="video-thumbnail">
-              <img src="img/video-3.jpg" alt="Miniatura de video educativo">
-              <span class="play-icon">▶</span>
-            </div>
-            <h3>Cómo prepararte para una consulta médica</h3>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
+<footer class="site-footer">
     <div class="container footer-container">
       <p>© 2026 Medicina Traducida</p>
       <p>Contenido informativo. No reemplaza una consulta médica profesional.</p>
     </div>
-  </footer>
+</footer>
 
 </body>
 </html>

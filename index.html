@@ -4,156 +4,348 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Información médica clara y confiable explicada para pacientes. Aprende sobre salud, enfermedades y bienestar con Medicina Traducida.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+
   <title>Medicina Traducida</title>
-  <link rel="stylesheet" href="MT-estilo.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  
-<!-- INICIO: NAV + HERO -->
-<header class="home-hero">
-    <img src="IMAGENES PAG PRINCIPAL/IMG Pag principal 3.jpg" alt="Consulta médica familiar" class="hero-bg-img">    
-    <div class="hero-overlay">
-      <div class="container home-hero-content">
-        
-        <div class="hero-logo"></div>
 
-        <div class="hero-main-text">
-          <span>Bienvenidos a</span>
-          <h1>Medicina Traducida</h1>
-          <p>
-            Entiende tu salud sin complicaciones.<br>
-            Información médica clara, confiable y explicada como realmente la necesitas.
-          </p>
-        </div>
+<!-- Cabecera Principal -->
+<header class="header-principal">
+  <div class="container header-container">
+    <a href="1-principal.html" class="logo">
+        <img src="LOGO MT/MT icono.svg" alt="Logo Medicina Traducida" class="logo-icon">
+        <img src="LOGO MT/MT texto 1.svg" alt="Medicina Traducida" class="logo-text">  
+    </a>
 
-        <div class="hero-top">          
-          <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-          <nav class="hero-nav">
-            <ul class="menu">
-              <li><a href="quienes-somos.html">Quiénes somos</a></li>
-              <li><a href="articulos.html">Artículos</a></li>
-              <li><a href="recursos.html">Recursos digitales</a></li>
-              <li><a href="consultas.html">Agendar cita</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-          </nav>
-        </div>
-
-      </div>
-    </div>
+    <nav class="nav-principal">
+      <a href="2-QuienesSomos.html">Quiénes Somos</a>
+      <a href="3-articulos.html">Artículos</a>
+      <a href="4-videos.html">Videos</a>
+      <a href="5-RecursosDigitales.html">Recursos Digitales</a>
+      <a href="6-AgendaCita.html" class="btn-primario">Agendar Cita</a>
+    </nav>
+  </div>
 </header>
 
 <main>
 
-  <!-- SECCIÓN: INTRODUCCIÓN / PROPUESTA DE VALOR -->
+<!--1era sección: Introducción -->
   <section class="intro-section" aria-labelledby="intro-title">
-    <div class="container intro-content">
+    <img src="IMAGENES PAG PRINCIPAL/IMG Pag principal 2.jpg" alt="Consulta médica familiar" class="intro-img">    
+    <div class="intro-overlay">
+      <div class="container intro-container">
+        <span>Entiende tu salud</span>
+        <h1 class="intro-title">sin complicaciones</h1>
+        <p class="intro-text">
+          Artículos • Videos • Recursos descargables <br> Información médica clara, confiable y explicada como realmente la necesitas.
+        </p>            
+        <div class="intro-botones">
+          <a href="5-RecursosDigitales.html" class="btn-primario">Recursos digitales</a>
+          <a href="3-articulos.html" class="btn-secundario">Explorar artículos</a>    
+        </div>
+      </div>
+    </div>
+  </section>
 
+<!--2da sección: Presentación de doctores -->
+  <section class="doctor-section">
+    <div class="container doctor-container">
       <div class="doctor-cards" aria-label="Equipo médico de Medicina Traducida">
-
         <article class="doctor-card">
           <img src="IMAGENES PAG PRINCIPAL/jannin.jpg" alt="Foto de la Dra. Jannin Salcedo">
-          <div class="doctor-info">
-            <h3>Dra. Jannin<br>Salcedo M.</h3>
-            <p>Nefrología</p>
-          </div>
+            <div class="doctor-info">
+              <h3>Dra. Jannin Salcedo</h3>
+              <p>Nefrología</p>
+            </div>
         </article>
-
         <article class="doctor-card">
           <img src="IMAGENES PAG PRINCIPAL/ernesto.png" alt="Foto del Dr. Ernesto Zavala">
           <div class="doctor-info">
-            <h3>Dr. Ernesto<br>Zavala F.</h3>
+            <h3>Dr. Ernesto Zavala</h3>
             <p>Reumatología</p>
           </div>
         </article>
-
       </div>
-
-      <header class="section-header intro-text">
-        <span class="section-tag">Medicina explicada para pacientes</span>
-        <h2 id="intro-title">La medicina no debería ser difícil de entender</h2>
-        <p>
-          Medicina Traducida nace para ayudarte a comprender tu salud sin miedo,
-          sin tecnicismos innecesarios y sin terminar más confundido después de buscar en internet.
+      <div class="doctor-intro">
+        <h2 id="doctor-titulo">La medicina no debería ser difícil de entender</h2>
+        <p> 
+          Medicina Traducida nace para ayudarte a comprender tu salud sin miedo. Creamos contenido médico claro, confiable y humano para que puedas tomar mejores decisiones sobre tu bienestar: 
         </p>
-        <p>
-          Creamos contenido médico claro, confiable y humano para que puedas tomar mejores decisiones
-          sobre tu bienestar, entender tus diagnósticos y reconocer cuándo algo necesita atención.
-        </p>
-      </header>
-
+        <ul class="doctor-list">
+          <li>Entiende tu diagnóstico</li>
+          <li>Reconoce cuando algo necesita tu atención</li>
+          <li>Explicaciones simples por médicos especialistas</li>
+        </ul>
+        <div class="doctor-boton">
+          <a href="2-QuienesSomos.html" class="btn-terciario">Cónoce nuestra historia</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- SECCIÓN: ARTÍCULOS DESTACADOS -->
-  <section class="articles-section" aria-labelledby="articles-title">
-    <div class="container articles-content">
+<!--3era sección: Arículos mas populares-->
+  <section class="articulos-section" id="articulos">
+    <div class="container articulos-container">
+      <h2 class="articulos-titulo">Artículos más populares</h2>
+      <header class="articulos-header">
+        <div class="articulos-intro">
+          <p> Explora nuestros artículos más leídos y descubre información médica confiable y fácil de entender. </p>
+          <a href="3-articulos.html" class="btn-terciario">Ver todos los artículos</a>
+        </div>            
+        <div class="articulos-tags" aria-label="Categorías de artículos">
+          <a href="#">Medicina general</a>
+          <a href="#">Reumatología</a>
+          <a href="#">Nefrología</a>
+          <a href="#">Nutrición</a>
+          <a href="#">Tratamiento</a>
+          <a href="#">Laboratorios</a>
+          <a href="#">Signos y síntomas</a>
+          <a href="#">Tips y consejos</a>
+        </div>            
+      </header>           
+      <div class="articulos-layout">            
+        <article class="articulo-principal-card">
+          <a href="#">
+            <img src="IMAGENES PAG PRINCIPAL/Articulo img 2.jpg" alt="Persona tomándose la presión arterial"  loading="lazy">
+            <div class="articulo-principal-contenido">
+              <span class="articulo-tag">Medicina general</span>
+              <h3>¿Cuándo una presión alta debe preocuparte?</h3>
+              <p>La presión alta no siempre da síntomas, sin embargo las complicaciones que puede tener cuando no se controla bien pueden ser irreversibles.  Señales comunes que pueden indicar elevación de presión arterial. </p>
+              <time datetime="2026-05-22">22 mayo 2026</time>
+            </div>
+          </a>
+        </article>
+        <div class="articulo-secundario-grid">
+          <article class="articulo-secundario-card">
+            <a href="#">
+              <img src="IMAGENES PAG PRINCIPAL/Articulo img 4.jpg" alt="Persona con dolor de rodilla"  loading="lazy">
+              <div class="articulo-secundario-contenido">
+                <span class="articulo-tag">Reumatología</span>
+                <h4>Cómo reconocer si tu AR esta controlada</h4>
+                <time datetime="2026-05-20">20 mayo 2026</time>
+              </div>
+            </a>
+          </article>
+          <article class="articulo-secundario-card">
+            <a href="#">
+              <img src="IMAGENES PAG PRINCIPAL/Articulo img 5.jpg" alt="Laboratorio de creatinina"  loading="lazy">
+              <div class="articulo-secundario-contenido">
+                <span class="articulo-tag">Nefrología</span>
+                <h4>¿Qué significa la creatinina en la función renal?</h4>
+                <time datetime="2026-05-18">18 mayo 2026</time>
+              </div>
+            </a>
+          </article>
+          <article class="articulo-secundario-card">
+            <a href="#">
+              <img src="IMAGENES PAG PRINCIPAL/Articulo img 3.jpg" alt="Múltiples pastillas"  loading="lazy">
+              <div class="articulo-secundario-contenido">
+                <span class="articulo-tag">Medicamentos</span>
+                <h4>Errores comunes al tomar tus medicinas</h4>
+                <time datetime="2026-05-16">16 mayo 2026</time>
+              </div>
+            </a>
+          </article>
+          <article class="articulo-secundario-card">
+            <a href="#">
+              <img src="IMAGENES PAG PRINCIPAL/Articulo img 1.jpg" alt="Buscando informacion en internet"  loading="lazy">
+              <div class="articulo-secundario-contenido">
+                <span class="articulo-tag">Tips y consejos</span>
+                <h4>¿Por qué buscar síntomas en internet puede confundirte más?</h4>
+                <time datetime="2026-05-14">14 mayo 2026</time>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <header class="section-header articles-intro">
-        <span class="section-tag">Contenido para pacientes</span>
-        <h2 id="articles-title">Aprende sobre tu salud</h2>
-        <p>
-          Artículos claros, prácticos y confiables para entender mejor tu cuerpo,
-          tus síntomas y tus diagnósticos.
-        </p>
+<!--4ta sección: Videos más recientes-->
+  <section class="videos-section">
+    <div class="container videos-containes">
+      <header class="videos-header">               
+        <div class="youtube-brand-box">
+          <p>Síguenos en YouTube </p>
+          <div>                       
+            <img src="LOGOS EXTERNOS/Youtube_logo.png" alt="Logo Youtube" class="logo-YT">
+            <img src="LOGO MT/MT texto estilo 3.svg" alt="Medicina Traducida" class="logo-text-3">
+          </div>
+        </div>
+        <div class="videos-intro">          
+          <h2>Mira nuestros últimos videos</h2>        
+          <p> Videos claros y confiables para entender mejor tu salud, tus síntomas y tus tratamientos. </p> 
+          <a href="4-videos.html" class="btn-terciario">Ver todos los videos</a>
+        </div>         
       </header>
-
-      <div class="articles-layout">
-        <article class="featured-article">
-          <img src="IMAGENES PAG PRINCIPAL/Articulo img 1.jpg" alt="Paciente leyendo información médica"  loading="lazy">
-          <div class="article-info">
-            <span class="article-category">Salud general</span>
-            <h3>¿Por qué buscar síntomas en internet puede confundirte más?</h3>
-            <p>
-              Te explicamos cómo interpretar mejor la información médica online
-              y cuándo consultar con un profesional.
-            </p>
+      <div class="videos-layout">
+        <article class="video-principal">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/Lww-wuuEnz4"
+              title="Video principal de Medicina Traducida"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-principal-contenido">
+            <h3> ¿Sufres de dolor articular en las manos? Identifica estas 5 señales </h3>
+            <p> ¿Sufres de dolor articular constante? El Dr. Ernesto Zavala, médico reumatólogo , explica cómo diferenciar un malestar pasajero de una condición autoinmune crónica. </p>
+            <div class="video-principal-meta">
+              <time datetime="2026-06-15">Se estrenó el 15 jun 2026</time>
+              <span class="video-tag">Reumatología</span>
+            </div>              
           </div>
         </article>
-
-        <aside class="popular-articles" aria-labelledby="popular-title">
-          <h3 id="popular-title">Lo más leído</h3>
-          
-          <article class="small-article">
-            <img src="IMAGENES PAG PRINCIPAL/Articulo img 2.jpg" alt="Persona tomándose la presión arterial"  loading="lazy">
-            <div>
-              <span class="article-category">Signos de alarma</span>
-              <h4>¿Cuándo una presión alta debe preocuparte?</h4>
-            </div>
+        <aside class="video-secundario-grid">
+          <article class="video-secundario" data-url="https://www.youtube.com/watch?v=qp8wx3KS_Bs">
+            <a href="#">
+              <div class="video-secundario-img">
+                <img src="https://img.youtube.com/vi/qp8wx3KS_Bs/hqdefault.jpg" alt="Miniatura de video">
+              </div>
+              <div class="video-secundario-contenido">
+                <h4> ¿Es artritis reumatoide? 5 señales para identificarla a tiempo </h4>
+                <div class="video-secundario-meta">
+                  <time datetime="2026-06-01"> Se estrenó el 01 jun 2026</time>
+                  <span class="video-tag">Signos y síntomas</span>
+                </div>                               
+               </div>
+            </a>
           </article>
-
-          <article class="small-article">
-            <img src="IMAGENES PAG PRINCIPAL/Articulo img 3.jpg" alt="Pastillas y medicamentos sobre una mesa"  loading="lazy">
-            <div>
-              <span class="article-category">Medicación</span>
-              <h4>Errores frecuentes al tomar medicamentos</h4>
-            </div>
+          <article class="video-secundario" data-url="https://www.youtube.com/watch?v=azQnVrcquUs">
+            <a href="#">
+              <div class="video-secundario-img">
+                <img src="https://img.youtube.com/vi/azQnVrcquUs/hqdefault.jpg" alt="Miniatura de video">
+              </div>
+              <div class="video-secundario-contenido">
+                <h4> 3 meses - ¿Está funcionando tu tratamiento de la artritis?: Tratamiento de la Artritis Reumatoide </h4>
+                <div class="video-secundario-meta">
+                  <time datetime="2026-05-18">Se estrenó el 18 may 2026</time>
+                  <span class="video-tag">Tratamiento</span>
+                </div>                                
+              </div>
+            </a>
           </article>
-
-          <article class="small-article">
-            <img src="IMAGENES PAG PRINCIPAL/Articulo img 4.jpg" alt="Persona con dolor en la rodilla"  loading="lazy">
-            <div>
-              <span class="article-category">Reumatología</span>
-              <h4>Dolor articular: cuándo consultar y cuándo observar</h4>
-            </div>
+          <article class="video-secundario" data-url="https://www.youtube.com/watch?v=Uf95qXvHpJM">
+            <a href="#">
+              <div class="video-secundario-img">
+                <img src="https://img.youtube.com/vi/Uf95qXvHpJM/hqdefault.jpg" alt="Miniatura de video">
+              </div>
+              <div class="video-secundario-contenido">
+                <h4> Artritis reumatoide y el riesgo de desarrollar CÁNCER - ¿Tener artritis da cáncer? </h4>
+                <div class="video-secundario-meta">
+                  <time datetime="2026-05-11">Se estrenó el 11 may 2026</time>
+                  <span class="video-tag">Reumatología</span>
+                </div>
+              </div>
+            </a>
           </article>
-
-          <article class="small-article">
-            <img src="IMAGENES PAG PRINCIPAL/Articulo img 5.jpg" alt="Vaso de agua junto a exámenes médicos"  loading="lazy">
-            <div>
-              <span class="article-category">Nefrología</span>
-              <h4>¿Qué significa tener creatinina alta?</h4>
-            </div>
+          <article class="video-secundario" data-url="https://www.youtube.com/watch?v=B6e8zu3-ApA">
+            <a href="#">
+              <div class="video-secundario-img">
+                <img src="https://img.youtube.com/vi/B6e8zu3-ApA/hqdefault.jpg" alt="Miniatura de video">
+              </div>
+              <div class="video-secundario-contenido">
+                <h4> ¿Estás tomando las vitaminas correctas? La verdad aquí </h4>
+                <div class="video-secundario-meta">
+                  <time datetime="2026-05-04">Se estrenó el 04 may 2026</time>
+                  <span class="video-tag">Nutrición</span>
+                </div>
+              </div>
+            </a>
           </article>
-
         </aside>
-
       </div>
-
     </div>
   </section>
+
+<!-- 5ta sección: Carrusel de recursos digitales-->
+  <section class="recursos-section" id="recursos">
+    <div class="container recursos-container">
+      <header class="recursos-header">               
+        <h2>Recursos para el cuidado de tu salud</h2>        
+        <p> Guías, journals y cursos pensados para ayudarte a organizar tu salud y entender mejor lo que pasa en tu cuerpo. </p> 
+        <a href="5-RecursosDigitales.html" class="btn-terciario">Explorar recursos digitales</a>       
+      </header>
+      <div class="recursos-carrusel">
+        <button class="recursos-btn recursos-prev" type="button" aria-label="Recurso anterior"> ‹ </button>
+        <div class="recursos-viewport">
+          <div class="recursos-grid">
+            <article class="recursos-card">
+              <img src="IMAGENES PAG PRINCIPAL/Recurso img 1.jpg" alt="Guía digital para controlar la presión arterial"  loading="lazy">
+              <div class="recursos-contenido">
+                <span class="recursos-tipo">PDF gratuito</span>
+                <h3>Guía rápida para entender tu presión arterial</h3>
+                <p>Aprende qué significan tus números y cuándo preocuparte.</p>
+                <div class="recursos-info">
+                  <span class="recursos-precio gratis">Gratis</span>
+                  <a href="#" class="btn-secundario">Obtener</a>
+                </div>
+              </div>
+            </article>
+            <article class="recursos-card">
+              <img src="IMAGENES PAG PRINCIPAL/Recurso img 2.jpg" alt="Journal para registrar síntomas diarios"  loading="lazy">
+              <div class="recursos-contenido">
+                <span class="recursos-tipo">Journal</span>
+                <h3>Diario de síntomas para llevar a consulta</h3>
+                <p>Registra molestias, horarios, alimentos, medicamentos y evolución.</p>
+                <div class="recursos-info">
+                  <span class="recursos-precio gratis">Gratis</span>
+                  <a href="#" class="btn-secundario">Obtener</a>
+                </div>
+              </div>
+            </article>
+            <article class="recursos-card">
+              <img src="IMAGENES PAG PRINCIPAL/Recurso img 3.jpg" alt="Checklist médica antes de ir a consulta"  loading="lazy">
+              <div class="recursos-contenido">
+                <span class="recursos-tipo">Checklist</span>
+                <h3>Checklist: qué llevar a tu consulta médica</h3>
+                <p>Una lista simple para no olvidar exámenes, preguntas o medicamentos.</p>
+                <div class="recursos-info">
+                  <span class="recursos-precio gratis">Gratis</span>
+                  <a href="#" class="btn-secundario">Descargar</a>
+                </div>
+              </div>
+            </article>
+            <article class="recursos-card">
+              <img src="IMAGENES PAG PRINCIPAL/Recurso img 4.jpg" alt="Curso virtual sobre Artritis Reumatoide"  loading="lazy">
+              <div class="recursos-contenido">
+                <span class="recursos-tipo">Curso virtual</span>
+                <h3>Entiende tu enfermedad: curso básico para pacientes</h3>
+                <p>Videos cortos para entender la AR, tus síntomas y señales de alerta.</p>
+                <div class="recursos-info">
+                  <span class="recursos-precio">Próximamente</span>
+                  <a href="#" class="btn-secundario">Ver curso</a>
+                </div>
+              </div>
+            </article>
+            <article class="recursos-card">
+              <img src="IMAGENES PAG PRINCIPAL/Recurso img 5.jpg" alt="Planificador de medicamentos"  loading="lazy">
+              <div class="recursos-contenido">
+                <span class="recursos-tipo">PDF editable</span>
+                <h3>Planificador semanal de medicamentos</h3>
+                <p>Organiza dosis, horarios y notas importantes para evitar olvidos.</p>
+                <div class="recursos-info">
+                  <span class="recursos-precio">S/ 9.90</span>
+                  <a href="#" class="btn-secundario">Ver más</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="recursos-btn recursos-next" type="button" aria-label="Siguiente recurso"> › </button>
+      </div>
+      <div class="recursos-dots" aria-label="Indicadores del carrusel"></div>
+    </div>
+  </section>
+
+
+
+
+
 
   <!-- SECCIÓN: RECURSOS / PRODUCTOS DIGITALES -->
   <section class="resources-section" aria-labelledby="resources-title">
